@@ -6,10 +6,10 @@ const { infoHandler, personsHandler, personIdHandler, deleteHandler, postHandler
 const router = new Router ();
 
 router.get('/info', middleware1, infoHandler);
-router.get('/', middleware1, personsHandler);
-router.get('/:id', middleware1, personIdHandler);
-router.delete('/:id', middleware1, deleteHandler);
-router.post('/', middleware2, postHandler);
+router.get('/api/persons', middleware1, personsHandler);
+router.get('/api/persons/:id', middleware1, personIdHandler);
+router.delete('/api/persons/:id', middleware1, deleteHandler);
+router.post('/api/persons', middleware2, postHandler);
 
 
 module.exports = router;
